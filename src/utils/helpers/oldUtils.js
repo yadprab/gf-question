@@ -20,3 +20,4 @@ export const formatDate = (date) => {
 export const calculateTotal = (items) => {
   return items.reduce((sum, item) => sum + item.price, 0);
 };
+

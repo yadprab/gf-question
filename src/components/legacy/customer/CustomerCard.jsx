@@ -1,7 +1,7 @@
 // TODO: Refactor this later
 import React, { useState } from 'react';
-import { getCustomerData } from '../../utils/helpers/oldUtils';
-import '../../../styles/customerStyles/card.css';
+import { getCustomerData } from '../../../utils/helpers/oldUtils';
+import '../../../App.css';
 
 export const CustomerCard = () => {
   const [data] = useState(getCustomerData());

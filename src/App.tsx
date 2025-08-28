@@ -1,11 +1,12 @@
 // Main application file - last updated by dev3
 import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
 import { CustomerPage } from './components/legacy/customer/CustomerPage';
-import Details from './views/customer/Details';
+import Details from './views/CustomerDetails/CustomerDetailsPage';
 import DashboardPage from './views/dashboard/DashboardPage';
 import SettingsPage from './views/settings/SettingsPage';
 import { AppProvider } from './context/AppContext';
 import './App.css';
+import InvoiceList from './components/InvoiceLists';
 
 // Navigation component with inconsistent styling and mixed concerns
 const Navigation = () => {
@@ -51,7 +52,7 @@ function App() {
         <div className="App" style={{ padding: '20px' }}>
           <Navigation />
           <Routes>
-            <Route path="/" element={<h1>Customer Portal</h1>} />
+            <Route path="/" element={<InvoiceList/>} />
             <Route path="/dashboard" element={<DashboardPage />} />
             <Route path="/customers" element={<CustomerPage />} />
             <Route path="/customer-details" element={<Details />} />
